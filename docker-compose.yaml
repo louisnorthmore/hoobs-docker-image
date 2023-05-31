@@ -1,0 +1,12 @@
+# Example Docker Compose
+version: '2'
+services:
+  hoobs:
+    image: hoobs-docker-image
+    build: .
+    restart: always
+    volumes: 
+      - ./config:/root/.hoobs/
+    ports:
+      - 89:80
+      - 51826:51826
